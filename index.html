@@ -11,13 +11,30 @@
 
 <body>
   <div id="links">
-  <header id="header">
-    <a id="logo" href="https://minchen.de"></a>
-  </header>
-  <a class="button" href="https://www.qrcode-generator.de">QR-Code erstellen (ohne Werbung)</a>
-  <a class="button" href="https://t1p.de">URL / Link Kürzen (auch QR)</a>
-  </section>
-</div>
+    <header id="header">
+      <a id="logo" href="https://minchen.de"></a>
+    </header>
+    <a class="button" href="https://www.qrcode-generator.de">QR-Code erstellen (ohne Werbung)</a>
+    <a class="button" href="https://t1p.de">URL / Link Kürzen (auch QR)</a>
+    <div class="field has-addons">
+      <div class="control">
+        <input id="img-search" class="input" type="text" placeholder="Kostenlose Bilder"/>
+      </div>
+      <div class="control">
+        <a onclick="imgSearch()" class="button">Suchen</a>
+      </div>
+      <script>
+        function imgSearch() {
+          var input = document.getElementById("img-search").value;
+          if(input === "") {
+            window.location.href = `https://unsplash.com/de`;
+          } else {
+            window.location.href = `https://unsplash.com/de/s/fotos/${input}?license=free`;
+          }
+        }
+      </script>
+    </div>
+  </div>
 </body>
 
 </html>

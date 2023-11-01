@@ -1,0 +1,37 @@
+html {
+    background-color: black;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 9px 4px white;
+    background-image: url('./black-logo.webp');
+    background-size: 108%;
+}
+
+#header {
+    justify-self: center;
+}
+
+#links {
+    display: grid;
+    gap: 1rem;
+    justify-items: stretch;
+}
